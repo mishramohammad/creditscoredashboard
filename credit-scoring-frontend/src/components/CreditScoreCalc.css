@@ -1,0 +1,13 @@
+.CreditScoreCalc-Container {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+}
+
+.CreditScoreCalc-Button {
+    background-color: yellow;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
