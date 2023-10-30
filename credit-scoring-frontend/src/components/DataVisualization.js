@@ -1,4 +1,11 @@
+import React from 'react';
 import { Bar } from 'react-chartjs-2';
+import { registerables } from 'chart.js';
+import {Chart } from 'react-chartjs-2';
+
+
+Chart.register(...registerables);
+
 
 const data = {
   labels: ['Income', 'Credit History', 'Outstanding Debt'],
@@ -21,4 +28,13 @@ const data = {
   ],
 };
 
-const MyBarChart = () => <Bar data={data} />;
+const DataVisualization = () => {
+  return (
+    <div>
+      <h2>Data Visualization</h2>
+      <Bar data={data} />
+    </div>
+  );
+};
+
+export default DataVisualization;

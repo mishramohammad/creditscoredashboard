@@ -1,4 +1,8 @@
 import { Form, Field } from 'react-final-form';
+import './DataEntry.css';
+import './DataVisualization.css';
+import './Report.css';
+
 
 const onSubmit = values => {
   // You can send the form values to your backend here
@@ -43,3 +47,5 @@ const MyForm = () => (
     )}
   />
 );
+
+export default MyForm;
