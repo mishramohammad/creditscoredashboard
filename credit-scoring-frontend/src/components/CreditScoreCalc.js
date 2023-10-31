@@ -2,21 +2,23 @@ import React, { useState } from 'react';
 import './CreditScoreCalc.css'; // Import the CSS file
 import Report from './Report';
 
+// reference: https://react.dev/learn/state-a-components-memory
 
 function CreditScoreCalc() {
     const [income, setIncome] = useState(0);
     const [creditHistory, setCreditHistory] = useState(0);
     const [outstandingDebt, setOutstandingDebt] = useState(0);
     const [creditScore, setCreditScore] = useState(null);
-    const [showReport, setShowReport] = useState(false); // New state variable
+    const [showReport, setShowReport] = useState(false); 
 
     const calculateCreditScore = (e) => {
-        e.preventDefault(); // Prevent the default form submission behavior
+        e.preventDefault();//prevents default submission behaviour
+        //code reference: https://stackoverflow.com/questions/19276853/preventing-form-submit-when-button-clicked
 
         // Example calculation:
         const calculatedScore = income * 0.6 + creditHistory * 0.3 - outstandingDebt * 0.1;
         setCreditScore(calculatedScore);
-        setShowReport(true); // Show the Report component
+        setShowReport(true); 
     };
 
     return (

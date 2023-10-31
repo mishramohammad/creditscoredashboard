@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+//add services to the container.
 builder.Services.AddControllers();
 
 builder.Services.AddCors(options =>
@@ -15,7 +15,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-// ...
 
 var app = builder.Build();
 
@@ -27,7 +26,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Enable CORS
+//enable CORS
 app.UseCors();
 
 app.UseAuthorization();
@@ -35,3 +34,8 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+/** CORS defines a way for client web applications that are loaded in one domain to interact 
+with resources in a different domain. 
+This is useful because complex applications often reference third-party APIs 
+and resources in their client-side code*/
